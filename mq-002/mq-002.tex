@@ -1,0 +1,110 @@
+\documentclass[A4]{ctexart}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{cancel}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\title{MathQuestion-002}
+\date{}
+
+\begin{document}
+	\maketitle
+	\underline{Review}\\
+	\begin{align*}
+		\frac{ax^2}{\color{red}a}+\frac{bx}{\color{red}a}+\frac{c}{\color{red}a}&=\frac 0{\color{red}a}\\
+		x^2+\frac bax+\frac ca&=0\quad\frac ba=p,\frac ca=q
+	\end{align*}
+	\begin{tcolorbox}[colback=white,colframe=teal]
+		\begin{align*}
+			x^2+px+q&=0\quad\text{Let }x=y+?\\
+			\left(y+?\right)^2+p\left(y+?\right)+q&=0\leftarrow \text{don't want }y\text{ term}\\
+			\left(y+?\right)^2\to2y\boxed{?=-\frac p2}&\quad p\left(y+?\right)\to py
+		\end{align*}
+	\end{tcolorbox}
+	\begin{align*}
+		x^2+px+q&=0\quad\text{Let }x=y-\frac p2,y=x+\frac p2\\
+		\left(y+?\right)^2+p\left(y+?\right)+q&=0\\
+		y^2\cancel{-py}+\frac{p^2}4\cancel{+py}-\frac{2\cdot p^2}{2\cdot2}+q&=0\\
+		y^2-\frac{p^2}4+q&=0\\
+		y^{\cancel{2}}&={\color{red}\pm\sqrt{\color{black}p^2-q}}\\
+		x+\frac p2&=\pm\sqrt{\frac{p^2}4-q}
+	\end{align*}
+	\begin{tcolorbox}[colback=white,colframe=blue]
+			\[x=-\frac p2\pm\sqrt{\frac{p^2}4-q}\]
+	\end{tcolorbox}
+	\newpage
+	\section{Question:}
+	\[ax^3+bx^2+cx+d=0\]
+	\underline{3 parts}\\
+	1.get rid of $x^2$ term\\
+	2.solve $y^3+py+q=0$\\
+	3.put together
+	\section*{Part1}
+	let $x=y-\frac b{3a}$
+	\begin{align*}
+		a\left(y-\frac b{3a}\right)^3+b\left(y-\frac b{3a}\right)^2+c\left(y-\frac b{3a}\right)+d&=0\\
+		a\left(y^3-3y^2\frac b{3a}+3y\frac{b^2}{9a^2}-\frac{b^3}{27a^3}\right)+b\left(y^2-2y\frac b{3a}+\frac{b^2}{9a^2}\right)+cy-\frac{cb}{3a}+d&=0\\
+		ay^3-\cancel{3a}y^2\frac b{\cancel{3a}}+\cancel{a}\cancel{3}y\frac{b^2}{\cancelto{3}{9}a^{\cancel{2}}}-\cancel{a}\frac{b^3}{27a^{\cancelto{2}{3}}}+by^2-\frac{2b^2}{3a}y+\frac{b^3}{9a^2}+cy-\frac{cb}{3a}+d&=0\\
+		ay^3\cancel{-by^2}+\frac{b^2}{3a}y-\frac{b^3}{27a^2}\cancel{+by^2}-\frac{2b^2}{3a}y+\frac{{\color{teal}3\cdot}b^3}{{\color{teal}3\cdot}9a^2}+cy-\frac{cb}{3a}+d&=0\\
+		\left(ay^3+\left(\frac{-b^2}{3a}+c\right)y+{\color{teal}\left(\frac{2b^3}{27a^3}-\frac{cd}{3a}+d\right)}\right)\times\frac 1a&=0\times \frac 1a\\
+		y^3+\left(\frac{-b^2}{3a^2}+\frac ca\right){\color{green}(\to p)\;}y+\left(\frac{2b^3}{27a^3}-\frac{cb}{3a^2}+\frac da\right){\color{green}\to q}&=0
+	\end{align*}
+	\begin{tcolorbox}[colback=white,colframe=yellow]
+			\[y^3+py+q=0\]
+	\end{tcolorbox}
+	\newpage
+	\section*{Part2}
+	let $y=z+\frac{}z$\\
+		$y^3+py+q=0$\\
+		$\left(z+\frac{}z\right)^3+p\left(z+\frac{}z\right)+q=0$\\
+		$z^3+3z^{\cancel{2}}\cdot\frac{{\color{red}-p}}{{\color{red}3}\cancel{z}}+..+pz+\frac{p}{z}$\\
+		$y=z-\frac{p}{3z}$
+	\begin{align*}
+		y^3+py+q&=0 \text{let }y=z-\frac{p}{3z}\\
+		\left(z-\frac{p}{3z}\right)^3+\left(z-\frac{p}{3z}\right)+q&=0\\
+		z^3\cancel{-3z^2\frac p{3z}}\cancel{+3z\frac {p^2}{9z^2}}-\frac{p^3}{27z^3}\cancel{+pz}\cancel{-\frac{p^2}{3z}}+q&=0\\
+		\left(z^3-\frac{p^3}{27z^3}+q\right){\color{red}\times z^3}&=0{\color{red}\times z^3}\\
+		\left(z^3\right)^2+q\left(z^3\right)-\frac{p^3}{27}&=0
+	\end{align*}
+	\underline{Earlier}\\
+	$x^2+Px+Q=0$\\
+	$x=-\frac P2\pm\sqrt{\frac{p^2}4-Q}$
+	\[z^3=-\frac q2\pm\sqrt{\frac{q^2}4+\frac{p^3}{27}}\]
+	take $z=\sqrt[3]{-\frac q2+\sqrt{\frac{q^2}4+\frac{p^3}{27}}}$\quad $y=z-\frac p{3z}$\\
+	\begin{align*}
+		y&=\sqrt[3]{-\frac q2+\sqrt{\frac{q^2}4+\frac{p^3}{27}}}-\frac{p{\color{teal}\cdot\sqrt[3]{-\frac q2-\sqrt{\frac{q^2}4+\frac{p^3}{27}}}}}{3\cdot\sqrt[3]{-\frac q2+\sqrt{\frac{q^2}4+\frac{p^3}{27}}}{\color{teal}\cdot\sqrt[3]{-\frac q2-\sqrt{\frac{q^2}4+\frac{p^3}{27}}}}}\\
+		y&=\sqrt[3]{-\frac q2+\sqrt{\frac{q^2}4+\frac{p^3}{27}}}-\frac{p{\color{teal}\cdot\sqrt[3]{-\frac q2-\sqrt{\frac{q^2}4+\frac{p^3}{27}}}}}{3\cdot\sqrt[3]{-\frac q2+\sqrt{\frac{q^2}4+\frac{p^3}{27}}{\color{teal}\cdot{-\frac q2-\sqrt{\frac{q^2}4+\frac{p^3}{27}}}}}}\\
+		y&=\sqrt[3]{-\frac{q}{2}+\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}
+		-\frac{\cancel{p}{\color{teal}\cdot \sqrt[3]{-\frac{q}{2}-\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}}}
+		{\cancel{3}\cdot\sqrt[3]{\cancel{+\frac{q^2}{4}} \cancel{-\frac{q^2}{4}}-\frac{\cancel{p}}{\cancel{3}}}}\\
+		y&=\sqrt[3]{-\frac{q}{2}+\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}+\sqrt[3]{-\frac{q}{2}-\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}
+	\end{align*}
+	$\omega^3=1$\\
+	$\omega^3-1=0$\\
+	$(\omega-1)(\omega^2+\omega+1)=0$\\
+	$\omega=1\quad\omega=-\frac 12\pm\frac{i\sqrt{3}}2$\\
+	$\omega_0=1$\\
+	$\omega_1=-\frac 12+\frac{i\sqrt{3}}2$\\
+	$\omega_2=-\frac 12-\frac{i\sqrt{3}}2$
+	\begin{tcolorbox}[colback=white,colframe=yellow]
+		$y^3+py+q=0$\\
+		$y_1=\sqrt[3]{-\frac{q}{2}+\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}+\sqrt[3]{-\frac{q}{2}-\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}$\\
+		$y_2=\left(-\frac 12+\frac{i\sqrt{3}}2\right)\sqrt[3]{-\frac{q}{2}+\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}+\left(-\frac 12-\frac{i\sqrt{3}}2\right)\sqrt[3]{-\frac{q}{2}-\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}$\\
+		$y_3=\left(-\frac 12-\frac{i\sqrt{3}}2\right)\sqrt[3]{-\frac{q}{2}+\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}+\left(-\frac 12+\frac{i\sqrt{3}}2\right)\sqrt[3]{-\frac{q}{2}-\sqrt{\frac{q^2}{4}+\frac{p^3}{27}}}$
+	\end{tcolorbox}
+	\section*{Part3 Put together}
+	$x=y-\frac b{3a}\quad y_1,y_2,y_3$\\
+	$p=\frac{-b^2}{3a^2}+\frac ca$\\
+	$q=\frac{2b^3}{27a^3}-\frac{cb}{3a^2}+\frac da$
+	\begin{flalign*}
+		&ax^3 + bx^2 + cx + d = 0&&\\
+		&x_1 = \sqrt[3]{\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}+\sqrt{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)^2+\left(\frac{-b^2}{9a^2}+\frac{c}{3a}\right)^3}} \\
+		&\quad +\sqrt[3]{\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}-\sqrt{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)^2+\left(\frac{-b^2}{9a^2}+\frac{c}{3a}\right)^3}}-\frac{b}{3a}&&\\
+		&x_2 = \left(\frac{-1}{2}+\frac{i\sqrt{3}}{2}\right)\sqrt[3]{\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}+\sqrt{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)^2+\left(\frac{-b^2}{9a^2}+\frac{c}{3a}\right)^3}} \\
+		&\quad +\left(\frac{-1}{2}-\frac{i\sqrt{3}}{2}\right)\sqrt[3]{\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}-\sqrt{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)^2+\left(\frac{-b^2}{9a^2}+\frac{c}{3a}\right)^3}}-\frac{b}{3a}&&\\
+		&x_3 = \left(\frac{-1}{2}-\frac{i\sqrt{3}}{2}\right)\sqrt[3]{\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}+\sqrt{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)^2+\left(\frac{-b^2}{9a^2}+\frac{c}{3a}\right)^3}} \\
+		&\quad +\left(\frac{-1}{2}+\frac{i\sqrt{3}}{2}\right)\sqrt[3]{\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}-\sqrt{\left(\frac{-b^3}{27a^3}+\frac{bc}{6a^2}-\frac{d}{2a}\right)^2+\left(\frac{-b^2}{9a^2}+\frac{c}{3a}\right)^3}}-\frac{b}{3a}&&
+	\end{flalign*}
+\end{document}
